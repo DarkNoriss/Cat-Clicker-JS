@@ -1,0 +1,66 @@
+:root {
+  background-color: gray;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-color: rgb(243, 12, 12);
+  height: 2rem;
+}
+
+.game {
+  background-color: rgb(12, 100, 243);
+  height: calc(100% - 2rem);
+  display: flex;
+
+  &__cat,
+  &__shop {
+    flex: 1;
+  }
+  &__cat {
+    border-right: 0.5rem solid azure;
+    background-color: rgb(107, 11, 11);
+    min-width: 500px;
+    flex-basis: 100%;
+  }
+  &__shop {
+    border-left: 0.5rem solid azure;
+    background-color: rgb(192, 152, 152);
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+
+    &-title,
+    &-upgrades,
+    &-buildings {
+      flex: 1;
+    }
+    &-title {
+      display: flex;
+      min-height: 5rem;
+      padding: 1rem;
+      font-size: 4rem;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 0.5rem solid azure;
+    }
+    &-upgrades {
+      min-height: 8rem;
+      border-top: 0.5rem solid azure;
+      border-bottom: 0.5rem solid azure;
+    }
+    &-buildings {
+      flex-basis: 100%;
+      border-top: 0.5rem solid azure;
+    }
+  }
+}
